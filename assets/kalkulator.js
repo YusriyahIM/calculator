@@ -1,6 +1,6 @@
 console.log("Selamat Anda berhasil menggunakan JavaScript pada Website");
 
-alert("Selamat Datang di Web Kalkulator 1.0 🧮");
+alert("Selamat Datang di Web Kalkulator 🧮");
 
 //object calculator
 const calculator = {
