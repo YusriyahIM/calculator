@@ -1,48 +1,51 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <title>Web Calculator</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style.css" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator</title>
   </head>
-
   <body>
-    <div class="blok">
-      <h2>Halo!, Selamat Datang di Web Kalkulator 🧮</h2>
-    </div>
-    <div class="flex-container-column card">
-      <div class="title">
-        <h2>Web Kalkulator</h2>
+    <section>
+      <div class="calculator">
+        <!-- Hitungan Kalkulator -->
+        <input type="text" class="calculator-screen" value="0" disabled />
+        <!-- Tombol Kalkulator -->
+        <div class="calculator-keys">
+          <div class="row">
+            <button class="all-clear">AC</button>
+            <button class="percent">%</button>
+            <button class="operator" value="/">&divide;</button>
+          </div>
+          <div class="row">
+            <button class="number" value="7">7</button>
+            <button class="number" value="8">8</button>
+            <button class="number" value="9">9</button>
+            <button class="operator" value="*">&times;</button>
+          </div>
+          <div class="row">
+            <button class="number" value="4">4</button>
+            <button class="number" value="5">5</button>
+            <button class="number" value="6">6</button>
+            <button class="operator" value="-">-</button>
+          </div>
+          <div class="row">
+            <button class="number" value="1">1</button>
+            <button class="number" value="2">2</button>
+            <button class="number" value="3">3</button>
+            <button class="operator" value="+">+</button>
+          </div>
+          <div class="row">
+            <button class="number zero-btn" value="0">0</button>
+            <button class="decimal" value=".">.</button>
+            <button class="equal-sign">=</button>
+          </div>
+        </div>
       </div>
-      <div class="display">
-        <h1 id="displayNumber">0</h1>
-      </div>
-      <div class="flex-container-row">
-        <div class="button">7</div>
-        <div class="button">8</div>
-        <div class="button">9</div>
-        <div class="button negatif">+/-</div>
-      </div>
-      <div class="flex-container-row">
-        <div class="button">4</div>
-        <div class="button">5</div>
-        <div class="button">6</div>
-        <div class="button operator">-</div>
-      </div>
-      <div class="flex-container-row">
-        <div class="button">1</div>
-        <div class="button">2</div>
-        <div class="button">3</div>
-        <div class="button operator">+</div>
-      </div>
-      <div class="flex-container-row">
-        <div class="button clear" style="font-weight: bold">CE</div>
-        <div class="button">0</div>
-        <div class="button equals double">=</div>
-      </div>
-    </div>
-    <aside>
+    </section>
+    <aside hidden>
       <div class="history card">
         <h2>Riwayat Perhitungan</h2>
         <table>
@@ -58,7 +61,7 @@
         </table>
       </div>
     </aside>
+    <script src="assets/script.js"></script>
     <script src="assets/storage.js"></script>
-    <script src="assets/kalkulator.js"></script>
   </body>
 </html>

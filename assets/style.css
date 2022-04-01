@@ -1,99 +1,59 @@
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
-
-body {
-  font-family: sans-serif;
-}
-
-.title {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: rgb(93, 6, 173);
-  /* border: 1px solid; */
-  text-align: center;
-  color: white;
-  /* margin-bottom: 10px; */
-}
-
-.jumbotron {
-  font-size: 20px;
-  padding: 60px;
-  background-color: rgb(90, 36, 139);
-  text-align: right;
-  color: white;
-}
-
-.flex-container-column {
-  display: flex;
-  flex-direction: column;
-
-  /* styling */
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: right;
-}
-
-.flex-container-row {
-  display: flex;
-}
-
-.display {
-  color: white;
+/* Bagian latar belakang */
+section {
+  /* background: radial-gradient(#b7ff, blueviolet); */
+  background: repeating-radial-gradient(blueviolet, darkmagenta);
+  min-height: 100vh;
   width: 100%;
-  padding: 10px 20px;
-  background-color: #5a6263;
-  border: 1px solid white;
-  margin-bottom: 15px;
-  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.button {
-  flex-basis: 25%;
+/* Bagian Kalkulator */
+.calculator {
+  width: 90%;
+  max-width: 400px;
+  background-color: rgb(61, 60, 60);
+  border-radius: 8px;
+  overflow: hidden;
+}
 
-  /* sytling */
-  font-size: 1.5em;
-  text-align: center;
-  padding: 40px;
-  border: 1px solid black;
-  background: -webkit-linear-gradient(top, #d2d2d2, #ddd);
+/* Bagian Tampilan Hitungan kalkulator */
+.calculator-screen {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(211, 209, 209);
+  color: rgb(50, 50, 50);
+  text-align: right;
+  font-size: 36px;
+  border: none;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.calculator-keys {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+button {
+  border: 0.5px solid rgba(0, 0, 0, 0.137);
+  height: 100px;
+  width: 25%;
+  background-color: rgb(216, 209, 209);
+  font-size: 30px;
+  color: black;
+  outline: none;
   cursor: pointer;
-}
-.button:hover {
-  font-weight: bold;
-}
-
-.operator,
-.negatif,
-.equals {
-  background: blueviolet;
-}
-
-.double {
-  flex-basis: 50%;
-}
-
-h2 {
-  text-align: center;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: white;
-  border-radius: 10px;
-  /* border: 1px solid; */
-  padding: 25px;
-  margin-top: 10px;
-}
-
-.blok {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: blueviolet;
-  border-radius: 5px;
-  color: white;
-  /* border: 1px solid; */
-  padding: 10px;
-  padding-left: 20px;
-  margin-top: 10px;
 }
 
 .history {
@@ -124,10 +84,37 @@ tr:nth-child(even) {
   background-color: #d2d2d2;
 }
 
+.all-clear,
+.zero-btn {
+  width: 50%;
+}
+
+.operator,
+.equal-sign,
+.percent {
+  background-color: rgb(133, 135, 138);
+}
+
+.all-clear {
+  background-color: rgb(192, 27, 27);
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(96, 84, 107);
+}
+
+.operator:hover,
+.equal-sign:hover,
+.percent:hover {
+  background-color: rgb(96, 84, 107);
+}
+
+.all-clear:hover {
+  background-color: rgb(161, 20, 20);
+}
+
 @media screen and (max-width: 518px) {
-  .button {
-    padding: 18px;
-  }
   .History {
     width: 100%;
   }
